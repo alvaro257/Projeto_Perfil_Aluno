@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Meu Perfil</h1>
+
+    <table>
+      <tr>
+        <th>Foto de Perfil</th>
+        <th>Informações Pessoais</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="carrossel">
+            <div class="fotos" id="fotos">
+              <img src="foto1.jpg" alt="Foto de perfil 1" class="foto-ativa" />
+              <img src="foto2.jpg" alt="Foto de perfil 2" />
+              <img src="foto3.jpg" alt="Foto de perfil 3" />
+            </div>
+          </div>
+          <div class="navegacao">
+            <button onclick="anterior()">Anterior</button>
+            <button onclick="proximo()">Próximo</button>
+          </div>
+        </td>
+        <td>
+          <p><b>Nome:</b> Álvaro G. Fernandes</p>
+          <p><b>RA:</b> 32327624</p>
+          <p>
+            <b>Curso:</b> Análise e Desenvolvimento de Sistemas - 3° período
+          </p>
+          <p>
+            <b>Endereço:</b> Rua Imbiruçu, 285, Vila Oeste, Belo Horizonte - MG
+          </p>
+          <p><b>E-mail:</b> alvarogomes123sms@gmail.com</p>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Unidades Curriculares Concluídas</h2>
+    <table>
+      <tr>
+        <th>Unidades Curriculares</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>Ambientes computacionais e conectividade</li>
+            <li>Modelagem de software</li>
+            <li>Sistemas computacionais e segurança</li>
+            <li>Programação de soluções computacionais</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Perfil Pessoal</h2>
+    <table>
+      <tr>
+        <th>Descrição</th>
+      </tr>
+      <tr>
+        <td>
+          Olá, meu nome é Álvaro, tenho 20 anos e sou estudante de TI. Sou
+          torcedor do Galo e meu principal hobby são os jogos, com preferência
+          por gêneros como quebra-cabeça e terror. Além dos jogos, também gosto
+          de acompanhar as novidades no mundo da tecnologia, buscando sempre me
+          manter atualizado sobre as inovações e tendências do mercado.
+        </td>
+      </tr>
+    </table>
+
+    <h2>Perfil Profissional/Acadêmico</h2>
+    <table>
+      <tr>
+        <th>Descrição</th>
+      </tr>
+      <tr>
+        <td>
+          Prazer, sou Álvaro, ex-estudante de Engenharia da Computação e
+          atualmente aluno de Análise e Desenvolvimento de Sistemas. No momento,
+          estou focado em aprimorar minhas habilidades em Python e SQL, mas
+          também tenho conhecimentos em Java, C e JavaScript. Além dos meus
+          estudos em ADS, sou aluno de uma das melhores plataformas de ensino de
+          programação: a Hashtag Treinamentos. Meu principal interesse é o
+          desenvolvimento de softwares e aplicativos. Sou um entusiasta do
+          Flutter. Embora ainda não tenha conhecimento em Dart, já consegui
+          construir aplicações Flutter com a ajuda do Flet, outro framework que
+          utiliza a tecnologia do Flutter, mas com Python. Atualmente, não tenho
+          experiência profissional, mas estou em busca da minha primeira
+          oportunidade de estágio.
+        </td>
+      </tr>
+    </table>
+
+    <h2>Redes Sociais</h2>
+    <table>
+      <tr>
+        <th>Links</th>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://www.linkedin.com/in/alvaro-g-fernandes">LinkedIn</a>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      let i = 0;
+
+      function mudarFoto(indice) {
+        const fotos = document.getElementById("fotos");
+        const totalFotos = fotos.children.length;
+        i = (indice + totalFotos) % totalFotos;
+        fotos.style.transform = `translateX(-${i * 100}%)`;
+      }
+
+      function anterior() {
+        mudarFoto(i - 1);
+      }
+
+      function proximo() {
+        mudarFoto(i + 1);
+      }
+    </script>
+  </body>
+</html>
