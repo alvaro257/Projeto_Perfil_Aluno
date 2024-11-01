@@ -1,0 +1,64 @@
+body {
+  background-color: #111111;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #669ace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: #273542;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  background-color: #3c556f;
+  padding: 10px;
+  text-align: left;
+}
+
+.carrossel {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.fotos {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.fotos img {
+  width: 100%;
+  height: auto;
+}
+
+.navegacao {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.navegacao button {
+  cursor: pointer;
+  background-color: #669ace;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+}
